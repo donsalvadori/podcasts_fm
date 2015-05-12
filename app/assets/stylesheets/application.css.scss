@@ -3,22 +3,22 @@ $highlight: #d2674e;
 $dark: #22292e;
 $light: #EDEFF5;
 
-body{
+body {
 	font-family: 'Open Sans', sans-serif;
 }
 
-.wrapper_wide{
+.wrapper_wide {
 	width: 90%;
 	margin: 0 auto;
 }
 
-.wrapper{
-	width:80%;
+.wrapper {
+	width: 80%;
 	margin: 0 auto;
 }
 
-.wrapper_skinny{
-	width:50%;
+.wrapper_skinny {
+	width: 50%;
 	margin: 0 auto;
 }
 
@@ -27,11 +27,25 @@ body{
 	display: table;
 }
 
-.cf:after{
+.cf:after {
 	clear: both;
 }
 
-.button{
+#notice_wrapper {
+	width: 100%;
+	position: absolute;
+	background: rgba(208,103,82, 0.85);
+	z-index: 999;
+	p {
+		color: $white;
+		text-align: center;
+		font-weight: 700;
+		font-size: 1.25rem;
+		padding: 1.5rem 0;
+	}
+}
+
+.button {
 	color: $white;
 	text-decoration: none;
 	font-size: 1rem;
@@ -39,28 +53,28 @@ body{
 	border-radius: 2rem;
 	outline: none;
 	border: none;
-	display: inline-block;
-	min-width: 8.5rem;
+  display: inline-block;
+  min-width: 8.5rem;
 }
 
-.button_highlight{
+.button_highlight {
 	background: $highlight;
 	transition: background .4s ease-in-out;
-	&:hover{
+	&:hover {
 		background: darken($highlight, 7.5%);
 	}
 }
 
-.button_white{
+.button_white {
 	background: $white;
 	color: $dark;
 	transition: background .4s ease-in-out;
-	&:hover{
+	&:hover {
 		background: darken($white, 7.5%);
 	}
 }
 
-.button_block{
+.button_block {
 	display: block;
 	margin: 0 auto;
 }
@@ -70,21 +84,21 @@ body{
 	background: $white;
 	padding: 2.5rem 0;
 	#logo {
-				float: left;
-				text-transform: uppercase;
-				font-weight: 700;
-				color: $dark;
-				text-decoration: none;
+		float: left;
+		text-transform: uppercase;
+		font-weight: 700;
+		color: $dark;
+		text-decoration: none;
 	}
-	nav{
+	nav {
 		float: right;
-		ul{
+		ul {
 			list-style: none;
 			margin: 0;
-			li{
+			li {
 				display: inline;
 				margin-left: 2.5rem;
-				a{
+				a {
 					color: $dark;
 					text-decoration: none;
 				}
@@ -93,12 +107,12 @@ body{
 	}
 }
 
-#banner{
+#banner {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
 	margin-bottom: 4rem;
-	h1{
+	h1 {
 		text-align: center;
 		color: $white;
 		font-size: 3rem;
@@ -109,31 +123,31 @@ body{
 	}
 }
 
-.podcasts_banner{
-	background-image:image-url("podcasts_banner.jpg");
+.podcasts_banner {
+	background-image: image-url("podcasts_banner.jpg");
 }
 
-.sign_in_banner{
-	background-image: image-url(sign_in_banner.jpg);
+.sign_in_banner {
+	background-image: image-url("sign_in_banner.jpg");
 }
 
-.sign_up_banner{
-	background-image: image-url(sign_up_banner.jpg);
+.sign_up_banner {
+	background-image: image-url("sign_up_banner.jpg");
 }
 
-.pagination:before, .pagination:after{
+.pagination:before, .pagination:after {
 	content: " ";
 	display: table;
 }
 
-.pagination:after{
-	clear:both;
+.pagination:after {
+	clear: both;
 }
 
-.pagination{
+.pagination {
 	text-align: center;
 	margin: 1rem 0 5rem 0;
-	a, .previous_page, .current, .next_page{
+	a, .previous_page, .current, .next_page {
 		padding: 0.75rem 1rem;
 		margin: 0 .25rem;
 		border-radius: .15rem;
@@ -144,48 +158,47 @@ body{
 		font-size: .7rem;
 		font-style: normal;
 		color: $dark;
-		&:hover{
+		&:hover {
 			background: $highlight;
 			color: $white;
 		}
 	}
-	.current{
+	.current {
 		background: $highlight;
 		color: $white;
 	}
-	.disabled{
-		color:#C0C0C0;
-		&:hover{
-			color:#C0C0C0;
-			background: #EDEFF5; 
+	.disabled {
+		color: #C0C0C0;
+		&:hover {
+			color: #C0C0C0;
+			background: #EDEFF5;
 		}
 	}
 }
 
-.field{
+.field {
 	margin: .5rem 0 1.5rem 0;
-
 }
 
-input[type="email"], input[type="text"], input[type="password"], textarea{
-	width:100%;
+input[type="email"], input[type="text"], input[type="password"], textarea {
+	width: 100%;
 	height: 2.5rem;
-	padding:.25rem 1rem;
+	padding: .25rem 1rem;
 	background: $light;
 	border: 1px solid darken($light, 5%);
 	border-radius: .35rem;
 	margin-top: .5rem;
 }
 
-textarea{
+textarea {
 	min-height: 8rem;
 	margin-top: .5rem !important;
 }
 
-#form{
+#form {
 	padding: 0 0 5rem 0;
 }
 
 @import 'normalize';
-@import 'welcome'; 
-@import 'podcasts';
+@import 'welcome';
+//@import 'podcasts';
