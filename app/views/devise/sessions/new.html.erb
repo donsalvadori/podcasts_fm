@@ -1,3 +1,12 @@
+<div id="banner" class="sign_in_banner">
+  <h1>Welcome back. It's nice to see you.</h1>
+</div>
+
+
+<div id="form">
+  <div class="wrapper_skinny">
+
+
 <h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -19,8 +28,10 @@
   <% end -%>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in", class: "button button_highlight button_block" %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+  </div>
+</div>
+
