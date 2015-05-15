@@ -12,7 +12,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'paperclip', '~> 4.2.1'
 gem 'turbolinks'
-gem 'aws-sdk', '~> 2.0.33'
+gem 'aws-sdk', '< 2.0'
 
 gem 'jbuilder', '~> 2.0'
 
