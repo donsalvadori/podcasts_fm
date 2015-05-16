@@ -13,6 +13,7 @@ gem 'jquery-rails'
 gem 'paperclip', '~> 4.2.1'
 gem 'turbolinks'
 gem 'aws-sdk', '< 2.0'
+gem 'will_paginate', '~> 3.0.7'
 
 gem 'jbuilder', '~> 2.0'
 
