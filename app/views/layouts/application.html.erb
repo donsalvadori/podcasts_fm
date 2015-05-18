@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PodcastsFm</title>
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <title>PodcastFm</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -10,29 +10,28 @@
 
 <% if alert %>
 	<div id="notice_wrapper">
-		<p class="alert"><% alert %></p>
+		<p class="alert"><%= alert %></p>
 	</div>
 <% elsif notice %>
 	<div id="notice_wrapper">
-		<p class="notice"><% notice %></p>
+		<p class="notice"><%= notice %></p>
 	</div>
 <% end %>
 
-<% unless curent_page?(root_path)%>
-	<%= render 'layouts/header' %>
+<% unless current_page?(root_path) %>
+	<%= render 'layouts/header'; %>
 <% end %>
 
 <%= yield %>
 
 <script>
 	$(document).ready(function(){
-		setTimeout(fucntion(){
-		$('notice_wrapper').fadeOut("slow", function(){
-			$this.remove();
-		});
-	    }, 4500 );
+		setTimeout(function() {
+			$('#notice_wrapper').fadeOut("slow", function() {
+				$this.remove();
+			});
+		}, 4500 );
 	});
-	
 </script>
 
 </body>
